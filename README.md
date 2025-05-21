@@ -12,8 +12,12 @@ Set up ESP32 and Arduino enviornment. Execute sketch " Wifiscanner".
 * [USB Micro Data Cable](https://www.amazon.com/AmazonBasics-Male-Micro-Cable-Black/dp/B0711PVX6Z/ref=sr_1_1_sspa?keywords=micro+usb+data+cable&qid=1678902214&sprefix=Micro+USB+data+%2Caps%2C89&sr=8-1-spons&psc=1&spLa=ZW5jcnlwdGVkUXVhbGlmaWVyPUFaU0NaUVZHU1RFUlAmZW5jcnlwdGVkSWQ9QTA3NTA4MDVFVERCS01HVlgxM1YmZW5jcnlwdGVkQWRJZD1BMDE4NTE1NTIwWUdONkdWSzU1M1Amd2lkZ2V0TmFtZT1zcF9hdGYmYWN0aW9uPWNsaWNrUmVkaXJlY3QmZG9Ob3RMb2dDbGljaz10cnVl)
 
 ## Links to documentation
+Video 1: *(https://youtu.be/I22uHf97EG4)*
+Video 2: *(https://youtu.be/HQBtwz5EBZM)*
 
 ##### Video 1: 
+Video 1: *(https://youtu.be/I22uHf97EG4)*
+Video 1: *(https://youtu.be/HQBtwz5EBZM)*
 
 ##### Other Links: 
 
@@ -35,20 +39,32 @@ Set up ESP32 and Arduino enviornment. Execute sketch " Wifiscanner".
 5. Wrote and uploaded the Blink sketch:
    - The LED was connected to GPIO4.
    - Sketch toggled the LED on and off every second.
-6. Opened Serial Monitor to verify the board output and functionality.
+
 
 
 
 ## Problems
-Note your problems or errors here.  Google any error you may come across, and not what you tried (even if it does not work), and what was the final answer. Document your errors and solutions that worked for you.  
+No issues were encountered during setup or execution. The process was smooth by carefully following the professor's recorded video.
 
-1. E (485) camera: Camera probe failed with error 0x105(ESP_ERR_NOT_FOUND)
-Camera init failed with error 0x105
- How did I solve: 
 
-### Example Problem
-1. Arduino code will not load on ESP32 Cam.
-   Answer: Camera drivers were incorrect I needed to install the driver: [https://www.wch-ic.com/downloads/CH341SER_ZIP.html](https://github.com/martin-ger/esp32_nat_router).  I used file, "CH341SER.ZIP" and it worked.
+### Example of Sketch Used
+```cpp
+/*
+  Blink
+  Turns an LED on for one second, then off for one second, repeatedly.
+  GPIO4 used on ESP32-CAM module.
+*/
 
+void setup() {
+  pinMode(4, OUTPUT); // Set GPIO4 as output
+}
+
+void loop() {
+  digitalWrite(4, HIGH);  // LED ON
+  delay(1000);            // Wait 1 second
+  digitalWrite(4, LOW);   // LED OFF
+  delay(1000);            // Wait 1 second
+}
 
 ## Final Report
+The ESP32-CAM was successfully programmed using the Arduino IDE. The onboard or external LED connected to GPIO4 blinked correctly at 1-second intervals. No errors were encountered. Setup was completed following the professor's guide. and above the feeling of having it done after putting hours on the work it nice.
