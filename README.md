@@ -19,7 +19,25 @@ Set up ESP32 and Arduino enviornment. Execute sketch " Wifiscanner".
 
 
 ## Steps I followed
-1. Write the steps you followed here.  This way you can keep track of where you might have messed up if the project does not work. 
+1. Watched the professor's YouTube tutorial in full.
+2. Downloaded and installed the latest Arduino IDE.
+3. Connected the ESP32-CAM module to my computer using a micro USB data cable via a USB-to-Serial adapter.
+4. In the Arduino IDE:
+   - Opened **File > Preferences**, added the ESP32 board URL:
+     ```
+     https://raw.githubusercontent.com/espressif/arduino-esp32/gh-pages/package_esp32_index.json
+     ```
+   - Went to **Tools > Board > Board Manager**, searched for “ESP32”, and installed it.
+   - Selected the board as **AI Thinker ESP32-CAM** under Tools > Board.
+   - Set the correct **Port** and upload settings:
+     - Baud Rate: 115200
+     - Partition Scheme: “Huge APP”
+5. Wrote and uploaded the Blink sketch:
+   - The LED was connected to GPIO4.
+   - Sketch toggled the LED on and off every second.
+6. Opened Serial Monitor to verify the board output and functionality.
+
+
 
 ## Problems
 Note your problems or errors here.  Google any error you may come across, and not what you tried (even if it does not work), and what was the final answer. Document your errors and solutions that worked for you.  
